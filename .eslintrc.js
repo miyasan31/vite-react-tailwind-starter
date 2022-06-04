@@ -91,7 +91,7 @@ module.exports = {
         selector: ["typeLike"],
         format: ["PascalCase"],
       },
-      //** TODO:なぜか効かない */
+      /* TODO:なぜか効かない */
       // function, method (classMethod, objectLiteralMethod, typeMethod) は camelCase
       // {
       //   selector: ["function", "method"],

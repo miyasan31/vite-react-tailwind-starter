@@ -1,9 +1,15 @@
-import { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
-function App() {
+import { useState } from "react";
+
+import logo from "./logo.svg";
+
+const App = () => {
   const [count, setCount] = useState(0);
+
+  const handleCount = () => {
+    setCount((count) => count + 1);
+  };
 
   return (
     <div className="App">
@@ -11,7 +17,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p className="bg-red-600 text-blue-300">Hello Vite + React!</p>
         <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
+          <button type="button" onClick={handleCount}>
             count is: {count}
           </button>
         </p>
@@ -19,12 +25,7 @@ function App() {
           Edit <code>App.tsx</code> and save to test HMR updates.
         </p>
         <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
             Learn React
           </a>
           {" | "}
@@ -40,6 +41,6 @@ function App() {
       </header>
     </div>
   );
-}
+};
 
 export default App;
