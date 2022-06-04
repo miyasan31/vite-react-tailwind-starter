@@ -1,0 +1,38 @@
+# npm
+**/node_modules/*
+
+# package.json
+package-lock.json
+yarn.lock
+
+# next
+.next
+public
+
+# git, github
+# .github
+# .gitignore
+
+# typescript
+# tsconfig.json
+
+# babel
+# .babelrc.js
+
+# eslint
+# .eslintrc.js
+# .eslintignore
+
+# prettiier
+# .prettierrc.js
+# .prettierignore
+
+# .env
+# .env.*
+
+# # docs
+# LICENSE.md
+# README.md
+
+# renovate
+# renovate.json

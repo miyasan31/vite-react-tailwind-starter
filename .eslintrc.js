@@ -9,7 +9,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ["plugin:react/recommended", "standard", "next/core-web-vitals"],
+  extends: ["plugin:react/recommended", "standard", "next/core-web-vitals", "prettier"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
@@ -30,20 +30,12 @@ module.exports = {
      * formatter
      * =========================================
      */
-    // ダブルクォーテーションを使用する
-    quotes: ["error", "double"],
-    // セミコロンを使用する
-    semi: ["error", "always"],
     // コンソールの種類を指定する
     "no-console": ["error", { allow: ["warn", "info", "error"] }],
-    // 配列・オブジェクトの最後にコンマを付ける
-    "comma-dangle": "off",
-    // 改行のコードを指定する
-    "linebreak-style": ["error", "unix"],
     // 未定義の変数の参照を禁止する
     "no-undef": "error",
-    // コメントの前に空行を入れる
-    "spaced-comment": ["error", "always", { markers: ["/"] }],
+    // 改行のコードを指定する
+    "linebreak-style": ["error", "unix"],
 
     /*
      * =========================================
@@ -59,10 +51,7 @@ module.exports = {
     // importの最後に1行空行を挿入する
     "import/newline-after-import": "error",
     // type only import を使用する
-    "@typescript-eslint/consistent-type-imports": [
-      "error",
-      { prefer: "type-imports" },
-    ],
+    "@typescript-eslint/consistent-type-imports": ["error", { prefer: "type-imports" }],
     // default export を使用しない
     "import/no-default-export": "error",
     // https://zenn.dev/uhyo/articles/eslint-plugin-import-access
@@ -92,10 +81,7 @@ module.exports = {
      * =========================================
      */
     // 未使用の変数の接頭辞に _ を付けるとエラーにならない
-    "no-unused-vars": [
-      "error",
-      { varsIgnorePattern: "^_", argsIgnorePattern: "^_" },
-    ],
+    "no-unused-vars": ["error", { varsIgnorePattern: "^_", argsIgnorePattern: "^_" }],
     "@typescript-eslint/naming-convention": [
       "error",
       // typeLike (class, interface, typeAlias, enum, typeParameter) は PascalCase
@@ -132,10 +118,7 @@ module.exports = {
     // autoFocusの使用する
     "jsx-a11y/no-autofocus": "off",
     // Linkコンポーネント使用時にtoプロパティを指定する
-    "jsx-a11y/anchor-is-valid": [
-      "error",
-      { components: ["Link"], specialLink: ["to"] },
-    ],
+    "jsx-a11y/anchor-is-valid": ["error", { components: ["Link"], specialLink: ["to"] }],
 
     /*
      * =========================================
