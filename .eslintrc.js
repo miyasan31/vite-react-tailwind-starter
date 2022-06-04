@@ -165,7 +165,7 @@ module.exports = {
   overrides: [
     {
       // default exportを一部のファイルで許可する
-      files: ["src/App.{ts,tsx}", "src/pages/**.{ts,tsx}"],
+      files: ["src/App.{ts,tsx}", "src/pages/**.{ts,tsx}", "vite.config.ts"],
       rules: {
         "import/no-default-export": "off",
       },
