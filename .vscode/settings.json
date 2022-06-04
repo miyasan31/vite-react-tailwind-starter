@@ -11,7 +11,7 @@
   "files.eol": "\n",
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.tsdk": "node_modules/typescript/lib",
-  "cSpell.words": ["Vite"],
+  "cSpell.words": ["Vite", "vitest"],
   "path-autocomplete.pathMappings": {
     "~": "${folder}/src"
   }
