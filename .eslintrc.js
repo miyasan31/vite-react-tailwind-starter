@@ -9,6 +9,14 @@ module.exports = {
     browser: true,
     es2021: true,
   },
+  plugins: [
+    "@typescript-eslint",
+    "simple-import-sort",
+    "tailwindcss",
+    // "react",
+    // "import-access",
+  ],
+  settings: { tailwindcss: { groupByResponsive: true } },
   extends: ["plugin:react/recommended", "standard", "next/core-web-vitals", "prettier"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -18,12 +26,6 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: [
-    "@typescript-eslint",
-    "simple-import-sort",
-    // "react",
-    // "import-access",
-  ],
   rules: {
     /*
      * =========================================
