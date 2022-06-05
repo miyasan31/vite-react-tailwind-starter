@@ -1,45 +1,37 @@
-import "./App.css";
+import { Route, Routes } from "react-router-dom";
 
-import { useState } from "react";
-
-import logo from "./logo.svg";
+import { Layout } from "~/components/Layout";
+import { Root } from "~/routes";
+import { NotFound } from "~/routes/404";
+import { About } from "~/routes/about";
+import { NestOne } from "~/routes/nest-one";
+import { NestOneAbout } from "~/routes/nest-one/about";
+import { NestTwo } from "~/routes/nest-one/nest-two";
+import { NestTwoAbout } from "~/routes/nest-one/nest-two/about";
+import { NestThree } from "~/routes/nest-one/nest-two/nest-three";
+import { NestThreeAbout } from "~/routes/nest-one/nest-two/nest-three/about";
 
 const App = () => {
-  const [count, setCount] = useState(0);
-
-  const handleCount = () => {
-    setCount((count) => count + 1);
-  };
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className="bg-red-600 text-blue-300">Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={handleCount}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-            Learn React
-          </a>
-          {" | "}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Root />}>
+          <Route path="nest-one" element={<NestOne />}>
+            <Route path="nest-two" element={<NestTwo />}>
+              <Route path="nest-three" element={<NestThree />} />
+              <Route path="nest-three-about" element={<NestThreeAbout />} />
+              <Route path="*" element={<NotFound />} />
+            </Route>
+            <Route path="nest-two-about" element={<NestTwoAbout />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+          <Route path="nest-one-about" element={<NestOneAbout />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Layout>
   );
 };
 
