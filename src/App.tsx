@@ -10,6 +10,10 @@ import { NestTwo } from "~/routes/nest-one/nest-two";
 import { NestTwoAbout } from "~/routes/nest-one/nest-two/about";
 import { NestThree } from "~/routes/nest-one/nest-two/nest-three";
 import { NestThreeAbout } from "~/routes/nest-one/nest-two/nest-three/about";
+import { NestPosts } from "~/routes/nest-posts";
+import { NestPost } from "~/routes/nest-posts/post";
+import { Posts } from "~/routes/posts";
+import { Post } from "~/routes/posts/post";
 
 const App = () => {
   return (
@@ -29,6 +33,13 @@ const App = () => {
           <Route path="*" element={<NotFound />} />
         </Route>
         <Route path="/about" element={<About />} />
+
+        <Route path="/posts" element={<Posts />} />
+        <Route path="/posts/:postId" element={<Post />} />
+
+        <Route path="/nest-posts" element={<NestPosts />}>
+          <Route path=":postId" element={<NestPost />} />
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>

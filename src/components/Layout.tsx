@@ -9,13 +9,19 @@ type LayoutProps = {
 
 export const Layout: FC<LayoutProps> = ({ children }) => {
   return (
-    <main className="h-screen bg-slate-900 p-4">
+    <main className="h-full min-h-screen bg-slate-900 p-4">
       <div className="flex gap-4 pb-4">
         <Link to="/" className={successButton}>
           to /
         </Link>
         <Link to="/about" className={successButton}>
           to /about
+        </Link>
+        <Link to="/posts" className={successButton}>
+          to /posts
+        </Link>
+        <Link to="/nest-posts" className={successButton}>
+          to /nest-posts
         </Link>
       </div>
       {children}
