@@ -8,7 +8,10 @@ type Props = {
 
 const queryClient = new QueryClient({
   defaultOptions: {
-    queries: { suspense: true },
+    queries: {
+      suspense: true,
+      useErrorBoundary: true,
+    },
   },
 });
 

@@ -11,13 +11,12 @@ interface Post {
 }
 
 export const PostComponent = () => {
-  const { error, data } = useQuery<Post[], Error>(
+  const { data } = useQuery<Post[], Error>(
     ["getPostList"],
     () => fetch("https://jsonplaceholder.typicode.com/posts").then((res) => res.json()),
     { suspense: true },
   );
 
-  if (error) return <p>LAn error has occurred: {error.message}</p>;
   if (!data) return <p>No data</p>;
 
   return (
