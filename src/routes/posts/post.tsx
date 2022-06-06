@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useQuery } from "react-query";
 import { Link, useParams } from "react-router-dom";
 
 import { successButton } from "~/constants/buttonColor";
@@ -10,23 +10,15 @@ interface PostDetail {
   userId: number;
 }
 
-const fetchPost = async (postId: string): Promise<PostDetail> => {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`);
-  const posts = await res.json();
-  return posts;
-};
-
 export const Post = () => {
   const { postId } = useParams();
-  const [post, setPost] = useState<PostDetail | null>(null);
+  const { isLoading, error, data } = useQuery<PostDetail, Error>(`getPostById${postId}`, () =>
+    fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`).then((res) => res.json()),
+  );
 
-  useEffect(() => {
-    (async () => {
-      if (!postId) return;
-      const response = await fetchPost(postId);
-      setPost(response);
-    })();
-  }, [postId]);
+  if (isLoading) return <p>Loading...</p>;
+  if (error) return <p>LAn error has occurred: {error.message}</p>;
+  if (!data) return <p>No data</p>;
 
   return (
     <main className="bg-slate-500 p-4">
@@ -37,10 +29,10 @@ export const Post = () => {
       </div>
 
       <h2>PostPage{postId}</h2>
-      <p>postId : {post?.id}</p>
-      <p>title : {post?.title}</p>
-      <p>body : {post?.body}</p>
-      <p>userId : {post?.userId}</p>
+      <p>postId : {data.id}</p>
+      <p>title : {data.title}</p>
+      <p>body : {data.body}</p>
+      <p>userId : {data.userId}</p>
     </main>
   );
 };
