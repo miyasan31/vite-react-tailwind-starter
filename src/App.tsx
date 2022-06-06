@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { Layout } from "~/components/Layout";
 import { Root } from "~/routes";
@@ -17,32 +17,34 @@ import { Post } from "~/routes/posts/post";
 
 const App = () => {
   return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Root />}>
-          <Route path="nest-one" element={<NestOne />}>
-            <Route path="nest-two" element={<NestTwo />}>
-              <Route path="nest-three" element={<NestThree />} />
-              <Route path="nest-three-about" element={<NestThreeAbout />} />
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Root />}>
+            <Route path="nest-one" element={<NestOne />}>
+              <Route path="nest-two" element={<NestTwo />}>
+                <Route path="nest-three" element={<NestThree />} />
+                <Route path="nest-three-about" element={<NestThreeAbout />} />
+                <Route path="*" element={<NotFound />} />
+              </Route>
+              <Route path="nest-two-about" element={<NestTwoAbout />} />
               <Route path="*" element={<NotFound />} />
             </Route>
-            <Route path="nest-two-about" element={<NestTwoAbout />} />
+            <Route path="nest-one-about" element={<NestOneAbout />} />
             <Route path="*" element={<NotFound />} />
           </Route>
-          <Route path="nest-one-about" element={<NestOneAbout />} />
+          <Route path="/about" element={<About />} />
+
+          <Route path="/posts" element={<Posts />} />
+          <Route path="/posts/:postId" element={<Post />} />
+
+          <Route path="/nest-posts" element={<NestPosts />}>
+            <Route path=":postId" element={<NestPost />} />
+          </Route>
           <Route path="*" element={<NotFound />} />
-        </Route>
-        <Route path="/about" element={<About />} />
-
-        <Route path="/posts" element={<Posts />} />
-        <Route path="/posts/:postId" element={<Post />} />
-
-        <Route path="/nest-posts" element={<NestPosts />}>
-          <Route path=":postId" element={<NestPost />} />
-        </Route>
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Layout>
+        </Routes>
+      </Layout>
+    </BrowserRouter>
   );
 };
 
