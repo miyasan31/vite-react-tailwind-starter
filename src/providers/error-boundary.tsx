@@ -7,7 +7,7 @@ type Props = {
 
 const ErrorBoundaryProvider: FC<Props> = ({ children }) => {
   return (
-    <ErrorBoundary FallbackComponent={() => <p className="text-rose-500">Oops, something went wrong</p>}>
+    <ErrorBoundary FallbackComponent={() => <p className="text-rose-500">Provider ErrorBoundary</p>}>
       {children}
     </ErrorBoundary>
   );

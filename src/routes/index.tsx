@@ -1,25 +1,16 @@
-import { Link, Outlet } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
 
-import { errorButton, successButton } from "~/constants/buttonColor";
+import { useAuth } from "~/hooks/useAuth";
+import { commonRoutes } from "~/routes/common/_index";
+import { privateRoutes } from "~/routes/private/_index";
+import { publicRoutes } from "~/routes/public/_index";
 
-export const Root = () => {
-  return (
-    <main className="bg-slate-700 p-4">
-      <h1 className="text-white">RootPage</h1>
+export const AppRoutes = () => {
+  const auth = useAuth();
 
-      <div className="flex gap-4 py-4">
-        <Link to="/nest-one" className={successButton}>
-          to /nest-one
-        </Link>
-        <Link to="/nest-one-about" className={successButton}>
-          to /nest-one-bout
-        </Link>
-        <Link to="/404-not-found" className={errorButton}>
-          to /404-not-found
-        </Link>
-      </div>
+  const routes = auth.isSignIn ? privateRoutes : publicRoutes;
 
-      <Outlet />
-    </main>
-  );
+  const element = useRoutes([...routes, ...commonRoutes]);
+
+  return <>{element}</>;
 };

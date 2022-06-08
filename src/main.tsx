@@ -3,13 +3,13 @@ import "~/styles/index.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import App from "~/App";
-import AppProvider from "~/providers/app";
+import AppProvider from "~/providers";
+import { AppRoutes } from "~/routes";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <AppProvider>
-      <App />
+      <AppRoutes />
     </AppProvider>
   </React.StrictMode>,
 );
