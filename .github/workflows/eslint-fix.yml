@@ -6,13 +6,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Setup node
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: lts/-1
-
-      # Setup node
-      - uses: actions/setup-node@v1
 
       - name: Install dependencies
         run: |
