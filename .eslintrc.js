@@ -188,5 +188,9 @@ module.exports = {
         ],
       },
     },
+    {
+      files: ["**/**.test.{ts,tsx}"],
+      rules: { "no-undef": "off" },
+    },
   ],
 };
