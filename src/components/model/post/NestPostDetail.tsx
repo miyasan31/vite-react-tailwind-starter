@@ -10,7 +10,7 @@ interface PostDetail {
   userId: number;
 }
 
-export const PostDetailComponent = () => {
+export const NestPostDetail = () => {
   const { postId } = useParams();
   const { data } = useQuery<PostDetail, Error>(
     ["getPost", { postId }],
@@ -23,8 +23,8 @@ export const PostDetailComponent = () => {
   return (
     <main className="bg-slate-500 p-4">
       <div className="flex gap-4 py-4">
-        <Link to="/posts" className={successButton}>
-          to /posts
+        <Link to="/nest-posts" className={successButton}>
+          to /nest-posts
         </Link>
       </div>
 

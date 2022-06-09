@@ -10,7 +10,7 @@ interface Post {
   userId: number;
 }
 
-export const NestPostComponent = () => {
+export const NestPost = () => {
   const { data } = useQuery<Post[], Error>(
     ["getPostList"],
     () => fetch("https://jsonplaceholder.typicode.com/posts").then((res) => res.json()),

@@ -3,19 +3,19 @@ import { Link, useParams } from "react-router-dom";
 
 import { successButton } from "~/constants/buttonColor";
 
-interface PostDetail {
+interface PostDetailResponse {
   id: number;
   title: string;
   body: string;
   userId: number;
 }
 
-export const NestPostDetailComponent = () => {
+export const PostDetail = () => {
   const { postId } = useParams();
-  const { data } = useQuery<PostDetail, Error>(
+  const { data } = useQuery<PostDetailResponse, Error>(
     ["getPost", { postId }],
     () => fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`).then((res) => res.json()),
-    { suspense: false },
+    { suspense: true },
   );
 
   if (!data) return null;
@@ -23,8 +23,8 @@ export const NestPostDetailComponent = () => {
   return (
     <main className="bg-slate-500 p-4">
       <div className="flex gap-4 py-4">
-        <Link to="/nest-posts" className={successButton}>
-          to /nest-posts
+        <Link to="/posts" className={successButton}>
+          to /posts
         </Link>
       </div>
 

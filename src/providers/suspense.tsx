@@ -1,14 +1,13 @@
 import type { FC, ReactNode } from "react";
-import { Suspense } from "react";
 
-import { Indicator } from "~/components/shared/Indicator";
+import { ReactSuspense } from "~/components/provider/Suspense";
 
 type Props = {
   children: ReactNode;
 };
 
 const SuspenseProvider: FC<Props> = ({ children }) => {
-  return <Suspense fallback={<Indicator />}>{children}</Suspense>;
+  return <ReactSuspense>{children}</ReactSuspense>;
 };
 
 export default SuspenseProvider;

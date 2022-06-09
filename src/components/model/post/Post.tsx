@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 
 import { successButton } from "~/constants/buttonColor";
 
-interface Post {
+interface PostResponse {
   id: number;
   title: string;
   body: string;
   userId: number;
 }
 
-export const PostComponent = () => {
-  const { data } = useQuery<Post[], Error>(
+export const Post = () => {
+  const { data } = useQuery<PostResponse[], Error>(
     ["getPostList"],
     () => fetch("https://jsonplaceholder.typicode.com/posts").then((res) => res.json()),
     { suspense: true },
