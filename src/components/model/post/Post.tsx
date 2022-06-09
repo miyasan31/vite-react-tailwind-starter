@@ -2,16 +2,10 @@ import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 
 import { successButton } from "~/constants/buttonColor";
-
-interface PostResponse {
-  id: number;
-  title: string;
-  body: string;
-  userId: number;
-}
+import type { IPost } from "~/interfaces/IPost";
 
 export const Post = () => {
-  const { data } = useQuery<PostResponse[], Error>(
+  const { data } = useQuery<IPost[], Error>(
     ["getPostList"],
     () => fetch("https://jsonplaceholder.typicode.com/posts").then((res) => res.json()),
     { suspense: true },
