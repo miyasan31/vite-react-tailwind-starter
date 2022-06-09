@@ -6,7 +6,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: lts/-1
 
       # Setup node
       - uses: actions/setup-node@v1
@@ -15,9 +18,9 @@ jobs:
         run: |
           npm install
 
-      - name: Prettier & ESLint
+      - name: ESLint
         run: |
-          npm run fix:prettier && npm run fix:eslint
+          npm run fix:eslint
 
       - name: TSC & Vite build
         run: |
