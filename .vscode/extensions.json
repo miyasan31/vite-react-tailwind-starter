@@ -1,0 +1,19 @@
+{
+  "recommendations": [
+    "seatonjiang.gitmoji-vscode",
+    "streetsidesoftware.code-spell-checker",
+    "oderwat.indent-rainbow",
+    "cobaltblu27.rainbow-highlighter",
+    "pmneo.tsimporter",
+    "ionutvmi.path-autocomplete",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "IronGeek.vscode-env",
+    "dsznajder.es7-react-js-snippets",
+    "antfu.vite",
+    "ZixuanChen.vitest-explorer",
+    "bradlc.vscode-tailwindcss",
+    "dracula-theme.theme-dracula",
+    "PKief.material-icon-theme"
+  ]
+}
