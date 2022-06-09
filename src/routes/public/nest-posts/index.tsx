@@ -1,5 +1,5 @@
+import { NestPostDetailPage } from "~/components/page/public/nest-posts/post-detail.page";
 import { FetchProvider } from "~/components/provider/Fetch";
-import { NestPostDetailPage } from "~/routes/public/nest-posts/post-detail.page";
 
 export const nestPostsRoutes = [
   {
