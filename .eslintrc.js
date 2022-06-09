@@ -153,6 +153,7 @@ module.exports = {
      */
     // next/image 推奨warning
     "@next/next/no-img-element": "off",
+    "@next/next/no-html-link-for-pages": "off",
 
     /*
      * =========================================
