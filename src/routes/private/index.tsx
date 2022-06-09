@@ -10,6 +10,11 @@ export const privateRoutes = [
         <FetchProvider />
       </PrivateLayout>
     ),
-    children: [{ path: "main", element: <MainPage /> }],
+    children: [
+      {
+        path: "main",
+        element: <MainPage />,
+      },
+    ],
   },
 ];
