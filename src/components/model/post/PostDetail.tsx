@@ -1,6 +1,7 @@
 import { useQuery } from "react-query";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
+import { Link } from "~/components/lib/Link";
 import { successButton } from "~/constants/buttonColor";
 import type { IPost } from "~/interfaces/IPost";
 

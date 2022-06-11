@@ -1,5 +1,4 @@
-import { Outlet } from "react-router-dom";
-
+import { Outlet } from "~/components/lib/Outlet";
 import { ReactErrorBoundary } from "~/components/provider/ErrorBoundary";
 import { ReactSuspense } from "~/components/provider/Suspense";
 

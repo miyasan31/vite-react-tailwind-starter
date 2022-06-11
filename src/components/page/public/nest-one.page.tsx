@@ -1,5 +1,5 @@
-import { Link, Outlet } from "react-router-dom";
-
+import { Link } from "~/components/lib/Link";
+import { Outlet } from "~/components/lib/Outlet";
 import { errorButton, successButton } from "~/constants/buttonColor";
 
 export const NestOnePage = () => {

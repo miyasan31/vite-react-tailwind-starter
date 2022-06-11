@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-
+import { Link } from "~/components/lib/Link";
 import { successButton } from "~/constants/buttonColor";
 
 export const AboutPage = () => {
