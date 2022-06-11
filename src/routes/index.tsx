@@ -1,6 +1,6 @@
 import { useRoutes } from "react-router-dom";
 
-import { useAuth } from "~/hooks/useAuth";
+import { useAuth } from "~/libs/hook/useAuth";
 import { commonRoutes } from "~/routes/common";
 import { privateRoutes } from "~/routes/private";
 import { publicRoutes } from "~/routes/public";
