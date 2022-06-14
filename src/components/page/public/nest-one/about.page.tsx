@@ -1,8 +1,14 @@
+import { Head } from "~/components/shared/Head";
+
 const AboutPage = () => {
   return (
-    <main className="bg-blue-300 p-4">
-      <h2>NestOneAboutPage</h2>
-    </main>
+    <>
+      <Head title="nest about page" description="nest about page" />
+
+      <main className="bg-blue-300 p-4">
+        <h2>NestOneAboutPage</h2>
+      </main>
+    </>
   );
 };
 
