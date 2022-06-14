@@ -1,5 +1,7 @@
 import { Post } from "~/components/model/post/Post";
 
-export const PostListPage = () => {
+const PostListPage = () => {
   return <Post />;
 };
+
+export default PostListPage;

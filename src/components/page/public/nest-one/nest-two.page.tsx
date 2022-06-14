@@ -2,7 +2,7 @@ import { Link } from "~/components/lib/Link";
 import { Outlet } from "~/components/lib/Outlet";
 import { errorButton, successButton } from "~/constants/buttonColor";
 
-export const NestTwoPage = () => {
+const NestTwoPage = () => {
   return (
     <main className="bg-slate-500 p-4">
       <h2 className="text-white">NestTwo</h2>
@@ -23,3 +23,5 @@ export const NestTwoPage = () => {
     </main>
   );
 };
+
+export default NestTwoPage;

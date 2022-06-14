@@ -1,5 +1,5 @@
-import { AboutPage } from "~/components/page/public/nest-one/about.page";
-import { NestTwoPage } from "~/components/page/public/nest-one/nest-two.page";
+import AboutPage from "~/components/page/public/nest-one/about.page";
+import NestTwoPage from "~/components/page/public/nest-one/nest-two.page";
 import { FetchProvider } from "~/components/provider/Fetch";
 import { commonRoutes } from "~/routes/common";
 import { nestTwoRoutes } from "~/routes/public/nest-one/nest-two";

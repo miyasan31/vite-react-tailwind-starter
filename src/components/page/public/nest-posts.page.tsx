@@ -1,5 +1,7 @@
 import { NestPost } from "~/components/model/post/NestPost";
 
-export const NestPostsPage = () => {
+const NestPostsPage = () => {
   return <NestPost />;
 };
+
+export default NestPostsPage;

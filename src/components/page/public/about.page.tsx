@@ -1,7 +1,7 @@
 import { Link } from "~/components/lib/Link";
 import { successButton } from "~/constants/buttonColor";
 
-export const AboutPage = () => {
+const AboutPage = () => {
   return (
     <main className="bg-slate-700 p-4">
       <h1 className="text-white">AboutPage</h1>
@@ -14,3 +14,5 @@ export const AboutPage = () => {
     </main>
   );
 };
+
+export default AboutPage;

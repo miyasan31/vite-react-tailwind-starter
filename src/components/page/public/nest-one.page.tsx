@@ -2,7 +2,7 @@ import { Link } from "~/components/lib/Link";
 import { Outlet } from "~/components/lib/Outlet";
 import { errorButton, successButton } from "~/constants/buttonColor";
 
-export const NestOnePage = () => {
+const NestOnePage = () => {
   return (
     <main className="bg-slate-700 p-4">
       <h2 className="text-white">NestOne</h2>
@@ -23,3 +23,5 @@ export const NestOnePage = () => {
     </main>
   );
 };
+
+export default NestOnePage;

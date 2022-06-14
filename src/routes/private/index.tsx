@@ -1,5 +1,5 @@
 import { PrivateLayout } from "~/components/layout/PrivateLayout";
-import { MainPage } from "~/components/page/private/main.page";
+import MainPage from "~/components/page/private/main.page";
 import { FetchProvider } from "~/components/provider/Fetch";
 
 export const privateRoutes = [

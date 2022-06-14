@@ -1,4 +1,4 @@
-import { NotFoundPage } from "~/components/page/common/404.page";
+import NotFoundPage from "~/components/page/common/404.page";
 
 export const commonRoutes = [
   {
