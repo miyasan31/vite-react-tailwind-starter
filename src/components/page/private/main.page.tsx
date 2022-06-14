@@ -1,5 +1,13 @@
+import { Head } from "~/components/shared/Head";
+
 const MainPage = () => {
-  return <div>main</div>;
+  return (
+    <>
+      <Head title="main page" description="main page" />
+
+      <div>main</div>
+    </>
+  );
 };
 
 export default MainPage;
