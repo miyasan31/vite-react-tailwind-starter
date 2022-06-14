@@ -15,7 +15,7 @@ const queryClient = new QueryClient({
   },
 });
 
-const ReactQueryProvider: FC<Props> = ({ children }) => {
+export const ReactQueryProvider: FC<Props> = ({ children }) => {
   return (
     <QueryClientProvider client={queryClient}>
       {children}
@@ -23,5 +23,3 @@ const ReactQueryProvider: FC<Props> = ({ children }) => {
     </QueryClientProvider>
   );
 };
-
-export default ReactQueryProvider;

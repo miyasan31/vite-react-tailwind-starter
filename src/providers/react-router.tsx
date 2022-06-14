@@ -5,8 +5,6 @@ type Props = {
   children: ReactNode;
 };
 
-const ReactRouterProvider: FC<Props> = ({ children }) => {
+export const ReactRouterProvider: FC<Props> = ({ children }) => {
   return <BrowserRouter>{children}</BrowserRouter>;
 };
-
-export default ReactRouterProvider;

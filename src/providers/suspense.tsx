@@ -6,8 +6,6 @@ type Props = {
   children: ReactNode;
 };
 
-const SuspenseProvider: FC<Props> = ({ children }) => {
+export const SuspenseProvider: FC<Props> = ({ children }) => {
   return <ReactSuspense>{children}</ReactSuspense>;
 };
-
-export default SuspenseProvider;

@@ -5,8 +5,6 @@ type Props = {
   children: ReactNode;
 };
 
-const ReactHelmetProvider: FC<Props> = ({ children }) => {
+export const ReactHelmetProvider: FC<Props> = ({ children }) => {
   return <HelmetProvider>{children}</HelmetProvider>;
 };
-
-export default ReactHelmetProvider;

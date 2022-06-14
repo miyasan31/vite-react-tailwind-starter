@@ -7,8 +7,6 @@ type Props = {
   children: ReactNode;
 };
 
-const ErrorBoundaryProvider: FC<Props> = ({ children }) => {
+export const ErrorBoundaryProvider: FC<Props> = ({ children }) => {
   return <ReactErrorBoundary FallbackComponent={AppFallback}>{children}</ReactErrorBoundary>;
 };
-
-export default ErrorBoundaryProvider;
