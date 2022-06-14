@@ -1,5 +1,8 @@
-import NestPostDetailPage from "~/components/page/public/nest-posts/post-detail.page";
+import { lazy } from "react";
+
 import { FetchProvider } from "~/components/provider/Fetch";
+
+const NestPostDetailPage = lazy(() => import("~/components/page/public/nest-posts/post-detail.page"));
 
 export const nestPostsRoutes = [
   {
