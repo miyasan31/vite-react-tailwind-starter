@@ -6,7 +6,8 @@ import { VitePWA } from "vite-plugin-pwa";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 const pwaOptions: Partial<VitePWAOptions> = {
-  base: "src/assets/",
+  mode: "development",
+  base: "/",
   includeAssets: ["favicon.svg"],
   manifest: {
     name: "PWA",
@@ -14,17 +15,17 @@ const pwaOptions: Partial<VitePWAOptions> = {
     theme_color: "#ffffff",
     icons: [
       {
-        src: "pwa-192x192.png", // <== don't add slash, for testing
+        src: "src/assets/pwa-192x192.png", // <== don't add slash, for testing
         sizes: "192x192",
         type: "image/png",
       },
       {
-        src: "/pwa-512x512.png", // <== don't remove slash, for testing
+        src: "/src/assets/pwa-512x512.png", // <== don't remove slash, for testing
         sizes: "512x512",
         type: "image/png",
       },
       {
-        src: "pwa-512x512.png", // <== don't add slash, for testing
+        src: "src/assets/pwa-512x512.png", // <== don't add slash, for testing
         sizes: "512x512",
         type: "image/png",
         purpose: "any maskable",
