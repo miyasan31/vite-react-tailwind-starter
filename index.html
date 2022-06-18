@@ -2,15 +2,32 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
-    <meta name="theme-color" content="#000000" />
     <meta name="description" content="React-Vite-TailwindCSS-Starter" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" href="/src/assets/pwa-192x192.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="msapplication-TileColor" content="#333333" />
+    <meta name="theme-color" content="#333333" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/favicon.ico" type="image/png" sizes="16x16" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="mask-icon" href="/favicon.svg" color="#FFFFFF" />
+
     <title>React-Vite-TailwindCSS-Starter</title>
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- PWA -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("./serviceWorker.js")
+            .then((reg) => console.log("サービスワーカーの登録成功", reg.scope))
+            .catch((err) => console.log("サービスワーカーの登録失敗", err));
+        });
+      }
+    </script>
   </body>
 </html>

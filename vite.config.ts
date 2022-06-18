@@ -6,25 +6,24 @@ import { VitePWA } from "vite-plugin-pwa";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 const pwaOptions: Partial<VitePWAOptions> = {
-  base: "src/assets/",
-  includeAssets: ["favicon.svg"],
+  includeAssets: ["favicon.svg", "favicon.ico", "robots.txt", "apple-touch-icon.png"],
   manifest: {
     name: "PWA",
     short_name: "PWA",
-    theme_color: "#ffffff",
+    theme_color: "#333333",
     icons: [
       {
-        src: "pwa-192x192.png", // <== don't add slash, for testing
+        src: "android-chrome-192x192.png", // <== don't add slash, for testing
         sizes: "192x192",
         type: "image/png",
       },
       {
-        src: "/pwa-512x512.png", // <== don't remove slash, for testing
+        src: "/android-chrome-512x512.png", // <== don't remove slash, for testing
         sizes: "512x512",
         type: "image/png",
       },
       {
-        src: "pwa-512x512.png", // <== don't add slash, for testing
+        src: "android-chrome-512x512.png", // <== don't add slash, for testing
         sizes: "512x512",
         type: "image/png",
         purpose: "any maskable",
