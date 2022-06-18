@@ -1,8 +1,11 @@
-import AboutPage from "~/components/page/public/nest-one/about.page";
-import NestTwoPage from "~/components/page/public/nest-one/nest-two.page";
+import { lazy } from "react";
+
 import { FetchProvider } from "~/components/provider/Fetch";
 import { commonRoutes } from "~/routes/common";
 import { nestTwoRoutes } from "~/routes/public/nest-one/nest-two";
+
+const AboutPage = lazy(() => import("~/components/page/public/nest-one/about.page"));
+const NestTwoPage = lazy(() => import("~/components/page/public/nest-one/nest-two.page"));
 
 export const nestOneRoutes = [
   {

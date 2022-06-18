@@ -1,1 +1,1 @@
-# React18 & Vite & Tailwind CSS Starter
+# React & Vite & Tailwind CSS Starter
