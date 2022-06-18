@@ -1,7 +1,3 @@
-// vite.config.ts->globals: true と設定したのでimportしなくても良い
-
-// import { describe, expect, it } from "vitest";
-
 import { add } from "./add";
 
 describe("add", () => {
