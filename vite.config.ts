@@ -6,9 +6,7 @@ import { VitePWA } from "vite-plugin-pwa";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 const pwaOptions: Partial<VitePWAOptions> = {
-  mode: "development",
-  base: "/",
-  includeAssets: ["favicon.svg"],
+  includeAssets: ["favicon.svg", "favicon.ico", "robots.txt", "apple-touch-icon.png"],
   manifest: {
     name: "PWA",
     short_name: "PWA",
