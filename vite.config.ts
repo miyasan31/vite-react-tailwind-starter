@@ -10,20 +10,20 @@ const pwaOptions: Partial<VitePWAOptions> = {
   manifest: {
     name: "PWA",
     short_name: "PWA",
-    theme_color: "#ffffff",
+    theme_color: "#333333",
     icons: [
       {
-        src: "src/assets/pwa-192x192.png", // <== don't add slash, for testing
+        src: "src/assets/android-chrome-192x192.png", // <== don't add slash, for testing
         sizes: "192x192",
         type: "image/png",
       },
       {
-        src: "/src/assets/pwa-512x512.png", // <== don't remove slash, for testing
+        src: "/src/assets/android-chrome-512x512.png", // <== don't remove slash, for testing
         sizes: "512x512",
         type: "image/png",
       },
       {
-        src: "src/assets/pwa-512x512.png", // <== don't add slash, for testing
+        src: "src/assets/android-chrome-512x512.png", // <== don't add slash, for testing
         sizes: "512x512",
         type: "image/png",
         purpose: "any maskable",
