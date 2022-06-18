@@ -11,7 +11,7 @@ const NestOnePage = () => {
       <main className="bg-slate-700 p-4">
         <h2 className="text-white">NestOne</h2>
 
-        <div className="flex gap-4 py-4">
+        <div className="flex flex-wrap gap-4 py-4">
           <Link to="/nest-one/nest-two" className={successButton}>
             to /nest-one/nest-two
           </Link>

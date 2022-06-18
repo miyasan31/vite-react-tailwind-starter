@@ -14,7 +14,12 @@
     "test": "npx vitest --run",
     "test:run": "npx vitest --run",
     "test:watch": "npx vitest",
-    "test:coverage": "npx vitest --coverage"
+    "test:coverage": "npx vitest --coverage",
+    "e2e": "npx playwright test",
+    "e2e:head": "npx playwright test --headed",
+    "e2e:chromium": "npx playwright test --project=chromium",
+    "e2e:firefox": "npx playwright test --project=firefox",
+    "e2e:webkit": "npx playwright test --project=webkit"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -31,6 +36,7 @@
     "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.22.2",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.2.0",
@@ -63,6 +69,7 @@
     "tailwindcss": "^3.0.24",
     "typescript": "^4.6.3",
     "vite": "^2.9.9",
+    "vite-plugin-pwa": "^0.12.0",
     "vite-tsconfig-paths": "^3.5.0",
     "vitest": "^0.13.1"
   },
