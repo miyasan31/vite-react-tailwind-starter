@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import type { VitePWAOptions } from "vite-plugin-pwa";
@@ -35,6 +37,7 @@ const pwaOptions: Partial<VitePWAOptions> = {
 export default defineConfig({
   plugins: [react(), tsconfigPaths(), VitePWA(pwaOptions)],
   assetsInclude: ["robots.txt"],
+  envDir: "./environments",
   test: {
     globals: true,
     environment: "jsdom",
