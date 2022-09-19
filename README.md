@@ -9,8 +9,8 @@
 - ReactErrorBoundary
 - ReactQuery
 - Prettier
-- EsLint
-- Husky
+- ESLint
+- husky
 - Vitest
 - Playwright
 - PWA
