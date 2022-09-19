@@ -6,7 +6,7 @@ import type { ErrorFallbackProps } from "./ErrorFallbackProps";
 export const LayoutFallback: FC<ErrorFallbackProps> = ({ error }) => {
   const navigate = useNavigate();
 
-  const handleGoBack = () => {
+  const onGoBack = () => {
     navigate(-1);
   };
 
@@ -14,7 +14,7 @@ export const LayoutFallback: FC<ErrorFallbackProps> = ({ error }) => {
     <div role="alert">
       <p>エラーが発生しました。</p>
       <p>{error.message}</p>
-      <button onClick={handleGoBack}>戻る</button>
+      <button onClick={onGoBack}>戻る</button>
     </div>
   );
 };

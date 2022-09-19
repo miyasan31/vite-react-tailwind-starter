@@ -77,7 +77,7 @@ module.exports = {
     "react/jsx-handler-names": [
       "error",
       {
-        eventHandlerPrefix: "handle",
+        eventHandlerPrefix: "on",
         eventHandlerPropPrefix: "on",
         checkLocalVariables: true,
         checkInlineFunction: true,
