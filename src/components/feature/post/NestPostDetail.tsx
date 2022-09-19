@@ -1,11 +1,11 @@
 import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
 
-import { Link } from "~/components/lib/Link";
+import { Link } from "~/components/lib/react-router/Link";
 import { successButton } from "~/constants/buttonColor";
 import type { IPost } from "~/interfaces/IPost";
 
-export const PostDetail = () => {
+export const NestPostDetail = () => {
   const { postId } = useParams();
   const { data } = useQuery<IPost, Error>(
     ["getPost", { postId }],
@@ -18,8 +18,8 @@ export const PostDetail = () => {
   return (
     <main className="p-4 bg-slate-500">
       <div className="flex gap-4 py-4">
-        <Link to="/posts" className={successButton}>
-          to /posts
+        <Link to="/nest-posts" className={successButton}>
+          to /nest-posts
         </Link>
       </div>
 

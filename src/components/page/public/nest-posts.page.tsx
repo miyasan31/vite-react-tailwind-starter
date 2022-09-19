@@ -1,5 +1,5 @@
-import { NestPost } from "~/components/model/post/NestPost";
-import { Head } from "~/components/shared/Head";
+import { NestPost } from "~/components/feature/post/NestPost";
+import { Head } from "~/components/lib/react-helmet-async/Head";
 
 const NestPostsPage = () => {
   return (

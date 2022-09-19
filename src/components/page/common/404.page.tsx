@@ -1,5 +1,5 @@
-import { Link } from "~/components/lib/Link";
-import { Head } from "~/components/shared/Head";
+import { Head } from "~/components/lib/react-helmet-async/Head";
+import { Link } from "~/components/lib/react-router/Link";
 import { successButton } from "~/constants/buttonColor";
 
 const NotFoundPage = () => {

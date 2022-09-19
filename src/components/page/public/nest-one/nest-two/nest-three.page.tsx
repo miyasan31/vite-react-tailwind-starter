@@ -1,6 +1,6 @@
-import { Link } from "~/components/lib/Link";
-import { Outlet } from "~/components/lib/Outlet";
-import { Head } from "~/components/shared/Head";
+import { Head } from "~/components/lib/react-helmet-async/Head";
+import { Link } from "~/components/lib/react-router/Link";
+import { Outlet } from "~/components/lib/react-router/Outlet";
 import { successButton } from "~/constants/buttonColor";
 
 const NestThreePage = () => {

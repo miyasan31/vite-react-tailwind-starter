@@ -1,5 +1,5 @@
-import { PostDetail } from "~/components/model/post/PostDetail";
-import { Head } from "~/components/shared/Head";
+import { PostDetail } from "~/components/feature/post/PostDetail";
+import { Head } from "~/components/lib/react-helmet-async/Head";
 
 const PostDetailPage = () => {
   return (

@@ -1,7 +1,7 @@
 import { useQuery } from "react-query";
 
-import { Link } from "~/components/lib/Link";
-import { Outlet } from "~/components/lib/Outlet";
+import { Link } from "~/components/lib/react-router/Link";
+import { Outlet } from "~/components/lib/react-router/Outlet";
 import { successButton } from "~/constants/buttonColor";
 import type { IPost } from "~/interfaces/IPost";
 

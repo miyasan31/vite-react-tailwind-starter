@@ -1,4 +1,4 @@
-import { Head } from "~/components/shared/Head";
+import { Head } from "~/components/lib/react-helmet-async/Head";
 
 const MainPage = () => {
   return (
