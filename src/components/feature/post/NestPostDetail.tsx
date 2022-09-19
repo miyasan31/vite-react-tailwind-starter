@@ -1,18 +1,14 @@
-import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
 
 import { Link } from "~/components/lib/react-router/Link";
 import { successButton } from "~/constants/buttonColor";
-import type { IPost } from "~/interfaces/IPost";
+import { postService } from "~/services/post.service";
+
+const { useGetPostDetail } = postService;
 
 export const NestPostDetail = () => {
   const { postId } = useParams();
-  const { data } = useQuery<IPost, Error>(
-    ["getPost", { postId }],
-    () => fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`).then((res) => res.json()),
-    { suspense: true },
-  );
-
+  const { data } = useGetPostDetail(String(postId));
   if (!data) return null;
 
   return (
