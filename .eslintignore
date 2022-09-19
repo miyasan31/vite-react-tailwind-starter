@@ -6,3 +6,6 @@ yarn.lock
 
 # build
 dist/*
+
+# test
+**/*.spec.ts

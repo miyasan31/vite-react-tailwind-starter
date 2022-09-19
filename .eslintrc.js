@@ -1,77 +1,75 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-  },
+  root: true,
+  parser: "@typescript-eslint/parser",
+  parserOptions: { project: "./tsconfig.json" },
+  settings: { tailwindcss: { groupByResponsive: true } },
   plugins: [
-    "@typescript-eslint",
+    "import",
+    "import-access",
+    "promise",
+    "react",
+    "sort-destructure-keys",
     "simple-import-sort",
     "tailwindcss",
-    // "react",
-    // "import-access",
   ],
-  settings: { tailwindcss: { groupByResponsive: true } },
-  extends: ["plugin:react/recommended", "standard", "next/core-web-vitals", "prettier"],
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: "latest",
-    sourceType: "module",
-  },
+  extends: [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:tailwindcss/recommended",
+    "next/core-web-vitals",
+    "prettier",
+  ],
   rules: {
     "no-console": ["error", { allow: ["warn", "info", "error"] }],
     "no-undef": "error",
     "linebreak-style": ["error", "unix"],
-
-    // import export
-    "@typescript-eslint/no-var-requires": "off",
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
-    "import/newline-after-import": "error",
-    "@typescript-eslint/consistent-type-imports": ["error", { prefer: "type-imports" }],
-    "import/no-default-export": "error",
-    // https://zenn.dev/uhyo/articles/eslint-plugin-import-access
-    // "import-access/jsdoc": ["error"],
-
-    // naming
-    "@typescript-eslint/no-explicit-any": "error",
     "prefer-arrow-callback": "error",
     "func-style": ["error", "expression"],
     "no-unused-vars": ["error", { varsIgnorePattern: "^_", argsIgnorePattern: "^_" }],
+
+    // simple-import-sort
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+
+    // import
+    "import/newline-after-import": "error",
+    "import/no-default-export": "error",
+
+    // import-access (https://zenn.dev/uhyo/articles/eslint-plugin-import-access)
+    "import-access/jsdoc": ["error"],
+
+    // typescript-eslint
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/consistent-type-imports": ["error", { prefer: "type-imports" }],
+    "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/naming-convention": [
       "error",
       {
         selector: ["typeLike"],
         format: ["PascalCase"],
       },
-      /* TODO:not working🤷‍♂️🤷‍♀️ */
-      // function, method (classMethod, objectLiteralMethod, typeMethod) は camelCase
-      // {
-      //   selector: ["function", "method"],
-      //   format: ["camelCase"],
-      // },
-      // function 以外の variable, parameter は camelCase
-      // {
-      //   selector: ["variable", "parameter"],
-      //   types: ["boolean", "string", "number", "array"],
-      //   format: ["camelCase"],
-      // },
-      // boolean の variable は特定の prefix をつけた状態で PascalCase
-      // {
-      //   selector: "variable",
-      //   types: ["boolean"],
-      //   format: ["PascalCase"],
-      //   prefix: ["is", "should", "has", "can", "did", "will"],
-      // },
+      {
+        selector: ["function", "method"],
+        format: ["camelCase"],
+      },
+      {
+        selector: ["variable", "parameter"],
+        types: ["boolean", "string", "number", "array"],
+        format: ["camelCase"],
+      },
+      {
+        selector: "variable",
+        types: ["boolean"],
+        format: ["PascalCase"],
+        prefix: ["is", "should", "has", "no"],
+        filter: { regex: "^_", match: false },
+      },
     ],
 
     // jsx-a11y
     "jsx-a11y/no-autofocus": "off",
     "jsx-a11y/anchor-is-valid": ["error", { components: ["Link"], specialLink: ["to"] }],
 
-    // React
+    // react
     "react/display-name": "off",
     "react/react-in-jsx-scope": "off",
     "react-hooks/exhaustive-deps": "warn",
@@ -86,7 +84,7 @@ module.exports = {
       },
     ],
 
-    // Next.js
+    // next.js
     "@next/next/no-img-element": "off",
     "@next/next/no-html-link-for-pages": "off",
   },
