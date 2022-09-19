@@ -1,7 +1,7 @@
 /// <reference types="vitest" />
 
 import react from "@vitejs/plugin-react";
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv } from "vite";
 import type { VitePWAOptions } from "vite-plugin-pwa";
 import { VitePWA } from "vite-plugin-pwa";
 import tsconfigPaths from "vite-tsconfig-paths";
@@ -34,15 +34,23 @@ const pwaOptions: Partial<VitePWAOptions> = {
 };
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react(), tsconfigPaths(), VitePWA(pwaOptions)],
-  assetsInclude: ["robots.txt"],
-  envDir: "./environments",
-  test: {
-    globals: true,
-    environment: "jsdom",
-    setupFiles: "./vitest.setup.ts",
-    include: ["src/**/*.test.{ts,tsx}"],
-    exclude: ["**/node_modules/**", "**/dist/**", "e2e/**"],
-  },
+export default defineConfig(({ mode }) => {
+  const env = { ...loadEnv(mode, "./env") };
+
+  return {
+    define: {
+      "process.env": env,
+      // __VITE_API_URL__: JSON.stringify(env.VITE_API_URL),
+    },
+    plugins: [react(), tsconfigPaths(), VitePWA(pwaOptions)],
+    assetsInclude: ["robots.txt"],
+    envDir: "./env",
+    test: {
+      globals: true,
+      environment: "jsdom",
+      setupFiles: "./vitest.setup.ts",
+      include: ["src/**/*.test.{ts,tsx}"],
+      exclude: ["**/node_modules/**", "**/dist/**", "e2e/**"],
+    },
+  };
 });
