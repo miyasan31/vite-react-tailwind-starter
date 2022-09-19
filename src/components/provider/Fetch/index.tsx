@@ -1,13 +1,13 @@
 import { Outlet } from "~/components/lib/react-router/Outlet";
-import { ReactErrorBoundary } from "~/components/provider/ErrorBoundary";
-import { ReactSuspense } from "~/components/provider/Suspense";
+import { ErrorBoundary } from "~/components/provider/ErrorBoundary";
+import { Suspense } from "~/components/provider/Suspense";
 
 export const FetchProvider = () => {
   return (
-    <ReactErrorBoundary>
-      <ReactSuspense>
+    <ErrorBoundary>
+      <Suspense>
         <Outlet />
-      </ReactSuspense>
-    </ReactErrorBoundary>
+      </Suspense>
+    </ErrorBoundary>
   );
 };

@@ -8,3 +8,6 @@ interface ImportMetaEnv {
 interface ImportMeta {
   readonly env: ImportMetaEnv;
 }
+
+/* eslint-disable @typescript-eslint/naming-convention */
+declare const __VITE_API_URL__: string;

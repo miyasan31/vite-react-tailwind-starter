@@ -1,10 +1,11 @@
 import type { FC, ReactNode } from "react";
 
-import { ErrorBoundaryProvider } from "~/providers/error-boundary";
+import { ErrorBoundary } from "~/components/provider/ErrorBoundary";
+import { AppFallback } from "~/components/provider/ErrorBoundary/Fallback";
+import { Suspense } from "~/components/provider/Suspense";
 import { ReactHelmetProvider } from "~/providers/react-helmet";
 import { ReactQueryProvider } from "~/providers/react-query";
 import { ReactRouterProvider } from "~/providers/react-router";
-import { SuspenseProvider } from "~/providers/suspense";
 
 type Props = {
   children: ReactNode;
@@ -12,8 +13,8 @@ type Props = {
 
 export const AppProvider: FC<Props> = ({ children }) => {
   return (
-    <ErrorBoundaryProvider>
-      <SuspenseProvider>
+    <ErrorBoundary FallbackComponent={AppFallback}>
+      <Suspense>
         <ReactHelmetProvider>
           <ReactQueryProvider>
             <ReactRouterProvider>
@@ -21,7 +22,7 @@ export const AppProvider: FC<Props> = ({ children }) => {
             </ReactRouterProvider>
           </ReactQueryProvider>
         </ReactHelmetProvider>
-      </SuspenseProvider>
-    </ErrorBoundaryProvider>
+      </Suspense>
+    </ErrorBoundary>
   );
 };
