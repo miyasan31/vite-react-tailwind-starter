@@ -9,7 +9,7 @@ type LayoutProps = {
 
 export const PrivateLayout: FC<LayoutProps> = ({ children }) => {
   return (
-    <main className="h-full min-h-screen bg-slate-900 p-4">
+    <main className="p-4 h-full min-h-screen bg-slate-900">
       <div className="flex flex-wrap gap-4 pb-4">
         <Link to="/" className={successButton}>
           to /

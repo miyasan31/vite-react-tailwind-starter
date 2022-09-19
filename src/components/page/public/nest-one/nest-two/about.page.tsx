@@ -5,7 +5,7 @@ const AboutPage = () => {
     <>
       <Head title="nest about page" description="nest about page" />
 
-      <main className="bg-blue-300 p-4">
+      <main className="p-4 bg-blue-300">
         <h3>NestTwoAboutPage</h3>
       </main>
     </>

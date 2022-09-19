@@ -7,7 +7,7 @@ const NotFoundPage = () => {
     <>
       <Head title="not found page" description="not found page" />
 
-      <main className="bg-red-600 p-4 text-white">
+      <main className="p-4 text-white bg-red-600">
         <h1>404 NotFound</h1>
 
         <div className="flex py-4">

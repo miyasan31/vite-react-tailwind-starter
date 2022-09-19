@@ -16,7 +16,7 @@ export const PostDetail = () => {
   if (!data) return null;
 
   return (
-    <main className="bg-slate-500 p-4">
+    <main className="p-4 bg-slate-500">
       <div className="flex gap-4 py-4">
         <Link to="/posts" className={successButton}>
           to /posts

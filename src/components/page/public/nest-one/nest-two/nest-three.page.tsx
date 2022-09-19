@@ -8,7 +8,7 @@ const NestThreePage = () => {
     <>
       <Head title="nest three page" description="nest three page" />
 
-      <main className="bg-slate-300 p-4">
+      <main className="p-4 bg-slate-300">
         <h3>NestThree</h3>
 
         <div className="flex flex-wrap gap-4 py-4">

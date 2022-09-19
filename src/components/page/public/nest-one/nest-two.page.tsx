@@ -8,7 +8,7 @@ const NestTwoPage = () => {
     <>
       <Head title="nest two page" description="nest two page" />
 
-      <main className="bg-slate-500 p-4">
+      <main className="p-4 bg-slate-500">
         <h2 className="text-white">NestTwo</h2>
 
         <div className="flex flex-wrap gap-4 py-4">

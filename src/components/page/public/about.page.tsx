@@ -7,7 +7,7 @@ const AboutPage = () => {
     <>
       <Head title="about page" description="about page" />
 
-      <main className="bg-slate-700 p-4">
+      <main className="p-4 bg-slate-700">
         <h1 className="text-white">AboutPage</h1>
 
         <div className="flex py-4">
