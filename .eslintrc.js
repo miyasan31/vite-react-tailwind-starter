@@ -109,7 +109,7 @@ module.exports = {
       },
     },
     {
-      files: ["**/{interfaces,interface*}/**.{ts,tsx}"],
+      files: ["**/{interfaces,services,repositories}/**/**.{ts,tsx}"],
       rules: {
         "@typescript-eslint/naming-convention": [
           "error",
@@ -120,6 +120,19 @@ module.exports = {
               regex: "^I[A-Z]",
               match: true,
             },
+          },
+        ],
+      },
+    },
+    {
+      files: ["**/constants/**/**.{ts,tsx}"],
+      rules: {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            selector: ["variable"],
+            types: ["boolean", "string", "number", "array"],
+            format: ["UPPER_CASE"],
           },
         ],
       },
