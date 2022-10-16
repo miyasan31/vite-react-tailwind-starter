@@ -8,8 +8,8 @@ const { useGetPostDetail } = postService;
 
 export const PostDetail = () => {
   const { postId } = useParams();
-  const { data } = useGetPostDetail(String(postId));
-  if (!data) return null;
+  const { data } = useGetPostDetail(String(postId), { enabled: !!postId });
+
   if (!data) return null;
 
   return (

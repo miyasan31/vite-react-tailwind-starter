@@ -4,8 +4,7 @@ import { FetchProvider } from "~/components/provider/Fetch";
 import { commonRoutes } from "~/routes/common";
 import { nestTwoRoutes } from "~/routes/public/nest-one/nest-two";
 
-const AboutPage = lazy(() => import("~/components/page/public/nest-one/about.page"));
-const NestTwoPage = lazy(() => import("~/components/page/public/nest-one/nest-two.page"));
+const NestTwoPage = lazy(() => import("~/components/page/public/NestTwo"));
 
 export const nestOneRoutes = [
   {
@@ -16,10 +15,6 @@ export const nestOneRoutes = [
         path: "nest-two",
         element: <NestTwoPage />,
         children: [...nestTwoRoutes],
-      },
-      {
-        path: "about",
-        element: <AboutPage />,
       },
       ...commonRoutes,
     ],
