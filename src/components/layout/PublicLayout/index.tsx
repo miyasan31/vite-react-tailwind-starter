@@ -1,6 +1,6 @@
 import type { FC, ReactNode } from "react";
 
-import { Link } from "~/components/lib/react-router/Link";
+import { Link } from "~/components/lib/router/Link";
 import { errorButton, successButton } from "~/constants/buttonColor";
 
 type LayoutProps = {

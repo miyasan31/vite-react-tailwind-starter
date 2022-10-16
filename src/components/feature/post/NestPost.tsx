@@ -1,5 +1,5 @@
-import { Link } from "~/components/lib/react-router/Link";
-import { Outlet } from "~/components/lib/react-router/Outlet";
+import { Link } from "~/components/lib/router/Link";
+import { Outlet } from "~/components/lib/router/Outlet";
 import { successButton } from "~/constants/buttonColor";
 import { postService } from "~/services/post.service";
 

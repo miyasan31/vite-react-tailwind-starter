@@ -1,6 +1,6 @@
 import { Head } from "~/components/lib/react-helmet-async/Head";
-import { Link } from "~/components/lib/react-router/Link";
-import { Outlet } from "~/components/lib/react-router/Outlet";
+import { Link } from "~/components/lib/router/Link";
+import { Outlet } from "~/components/lib/router/Outlet";
 import { errorButton, successButton } from "~/constants/buttonColor";
 
 const NestOnePage = () => {

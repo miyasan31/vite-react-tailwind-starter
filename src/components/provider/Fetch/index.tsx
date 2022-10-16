@@ -1,4 +1,4 @@
-import { Outlet } from "~/components/lib/react-router/Outlet";
+import { Outlet } from "~/components/lib/router/Outlet";
 import { ErrorBoundary } from "~/components/provider/ErrorBoundary";
 import { Suspense } from "~/components/provider/Suspense";
 
