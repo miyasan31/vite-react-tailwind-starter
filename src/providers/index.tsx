@@ -3,9 +3,9 @@ import type { FC, ReactNode } from "react";
 import { ErrorBoundary } from "~/components/provider/ErrorBoundary";
 import { AppFallback } from "~/components/provider/ErrorBoundary/Fallback";
 import { Suspense } from "~/components/provider/Suspense";
-import { ReactHelmetProvider } from "~/providers/react-helmet";
-import { ReactQueryProvider } from "~/providers/react-query";
-import { ReactRouterProvider } from "~/providers/react-router";
+import { ReactHelmetProvider } from "~/providers/ReactHelmetProvider";
+import { ReactQueryProvider } from "~/providers/ReactQueryProvider";
+import { ReactRouterProvider } from "~/providers/ReactRouterProvider";
 
 type Props = {
   children: ReactNode;
