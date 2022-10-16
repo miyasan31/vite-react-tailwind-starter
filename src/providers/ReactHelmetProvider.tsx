@@ -5,6 +5,9 @@ type Props = {
   children: ReactNode;
 };
 
+/**
+ * @package
+ */
 export const ReactHelmetProvider: FC<Props> = ({ children }) => {
   return <HelmetProvider>{children}</HelmetProvider>;
 };

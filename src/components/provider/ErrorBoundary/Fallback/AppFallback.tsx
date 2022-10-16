@@ -1,11 +1,13 @@
 import type { FC } from "react";
 
-import type { ErrorFallbackProps } from "./ErrorFallbackProps";
-
-const onReload = () => {
-  window.location.assign(window.location.origin);
+type ErrorFallbackProps = {
+  error: Error;
+  resetErrorBoundary: () => void;
 };
 
+/**
+ * @package
+ */
 export const AppFallback: FC<ErrorFallbackProps> = ({ error }) => {
   return (
     <div role="alert">
@@ -14,4 +16,8 @@ export const AppFallback: FC<ErrorFallbackProps> = ({ error }) => {
       <button onClick={onReload}>再読み込み</button>
     </div>
   );
+};
+
+const onReload = () => {
+  window.location.assign(window.location.origin);
 };

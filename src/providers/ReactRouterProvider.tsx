@@ -5,6 +5,9 @@ type Props = {
   children: ReactNode;
 };
 
+/**
+ * @package
+ */
 export const ReactRouterProvider: FC<Props> = ({ children }) => {
   return <BrowserRouter>{children}</BrowserRouter>;
 };

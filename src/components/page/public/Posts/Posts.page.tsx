@@ -4,6 +4,9 @@ import { postService } from "~/services/post.service";
 
 const { useGetPostList } = postService;
 
+/**
+ * @package
+ */
 export const Posts = () => {
   const { data } = useGetPostList();
 

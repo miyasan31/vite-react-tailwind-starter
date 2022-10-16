@@ -1,8 +1,14 @@
 import type { FC } from "react";
 import { useNavigate } from "react-router-dom";
 
-import type { ErrorFallbackProps } from "./ErrorFallbackProps";
+type ErrorFallbackProps = {
+  error: Error;
+  resetErrorBoundary: () => void;
+};
 
+/**
+ * @package
+ */
 export const LayoutFallback: FC<ErrorFallbackProps> = ({ error }) => {
   const navigate = useNavigate();
 

@@ -6,6 +6,9 @@ import { postService } from "~/services/post.service";
 
 const { useGetPostDetail } = postService;
 
+/**
+ * @package
+ */
 export const PostDetail = () => {
   const { postId } = useParams();
   const { data } = useGetPostDetail(String(postId), { enabled: !!postId });
