@@ -1,7 +1,6 @@
 import { lazy } from "react";
 
 import { PublicLayout } from "~/components/layout/PublicLayout";
-import { FetchProvider } from "~/components/provider/Fetch";
 import { nestOneRoutes } from "~/routes/public/nest-one";
 import { nestPostsRoutes } from "~/routes/public/nest-posts";
 
@@ -14,11 +13,7 @@ const PostDetailPage = lazy(() => import("~/components/page/public/PostDetail"))
 export const publicRoutes = [
   {
     path: "",
-    element: (
-      <PublicLayout>
-        <FetchProvider />
-      </PublicLayout>
-    ),
+    element: <PublicLayout />,
     children: [
       {
         path: "about",

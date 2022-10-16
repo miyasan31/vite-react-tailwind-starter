@@ -1,6 +1,7 @@
 import { lazy } from "react";
 
-import { FetchProvider } from "~/components/provider/Fetch";
+import { Outlet } from "~/components/lib/router/Outlet";
+import { Suspense } from "~/components/provider/Suspense";
 import { commonRoutes } from "~/routes/common";
 
 const NestThreePage = lazy(() => import("~/components/page/public/NestThree"));
@@ -8,7 +9,11 @@ const NestThreePage = lazy(() => import("~/components/page/public/NestThree"));
 export const nestTwoRoutes = [
   {
     path: "",
-    element: <FetchProvider />,
+    element: (
+      <Suspense>
+        <Outlet />
+      </Suspense>
+    ),
     children: [
       {
         path: "nest-three",

@@ -1,13 +1,18 @@
 import { lazy } from "react";
 
-import { FetchProvider } from "~/components/provider/Fetch";
+import { Outlet } from "~/components/lib/router/Outlet";
+import { Suspense } from "~/components/provider/Suspense";
 
 const NestPostDetailPage = lazy(() => import("~/components/page/public/NestPostDetail"));
 
 export const nestPostsRoutes = [
   {
     path: "",
-    element: <FetchProvider />,
+    element: (
+      <Suspense>
+        <Outlet />
+      </Suspense>
+    ),
     children: [
       {
         path: ":postId",

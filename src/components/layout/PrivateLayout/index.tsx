@@ -1,13 +1,9 @@
-import type { FC, ReactNode } from "react";
-
 import { Link } from "~/components/lib/router/Link";
+import { Outlet } from "~/components/lib/router/Outlet";
+import { Suspense } from "~/components/provider/Suspense";
 import { errorButton, successButton } from "~/constants/buttonColor";
 
-type LayoutProps = {
-  children: ReactNode;
-};
-
-export const PrivateLayout: FC<LayoutProps> = ({ children }) => {
+export const PrivateLayout = () => {
   return (
     <main className="p-4 h-full min-h-screen bg-slate-900">
       <div className="flex flex-wrap gap-4 pb-4">
@@ -31,7 +27,9 @@ export const PrivateLayout: FC<LayoutProps> = ({ children }) => {
         </Link>
       </div>
 
-      {children}
+      <Suspense>
+        <Outlet />
+      </Suspense>
     </main>
   );
 };

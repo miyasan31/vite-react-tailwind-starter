@@ -8,7 +8,8 @@ const { useGetPostDetail } = postService;
 
 export const NestPostDetail = () => {
   const { postId } = useParams();
-  const { data } = useGetPostDetail(String(postId));
+  const { data } = useGetPostDetail(String(postId), { enabled: !!postId });
+
   if (!data) return null;
 
   return (
