@@ -59,7 +59,7 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-sort-destructure-keys": "1.4.0",
     "eslint-plugin-tailwindcss": "^3.5.0",
-    "happy-dom": "^4.1.0",
+    "happy-dom": "^8.0.0",
     "husky": "^8.0.1",
     "jest-extended": "^2.0.0",
     "jsdom": "^19.0.0",
