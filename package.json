@@ -56,7 +56,7 @@
     "eslint-plugin-import-access": "^1.0.1",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.30.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
     "eslint-plugin-sort-destructure-keys": "1.4.0",
     "eslint-plugin-tailwindcss": "^3.5.0",
     "happy-dom": "^4.1.0",
