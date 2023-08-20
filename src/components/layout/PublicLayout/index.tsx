@@ -1,7 +1,7 @@
 import { Link } from "~/components/lib/router/Link";
 import { Outlet } from "~/components/lib/router/Outlet";
 import { Suspense } from "~/components/provider/Suspense";
-import { errorButton, successButton } from "~/constants/buttonColor";
+import { errorButton, successButton } from "~/shared/constants/buttonColor";
 
 export const PublicLayout = () => {
   return (

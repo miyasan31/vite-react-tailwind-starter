@@ -1,7 +1,7 @@
 import { Link } from "~/components/lib/router/Link";
 import { Outlet } from "~/components/lib/router/Outlet";
-import { successButton } from "~/constants/buttonColor";
-import { postService } from "~/services/post.service";
+import { successButton } from "~/shared/constants/buttonColor";
+import { postService } from "~/shared/services/post.service";
 
 const { useGetPostList } = postService;
 

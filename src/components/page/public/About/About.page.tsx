@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { successButton } from "~/constants/buttonColor";
+import { successButton } from "~/shared/constants/buttonColor";
 
 export const About = () => {
   return (

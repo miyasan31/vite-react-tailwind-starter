@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 
 import { Link } from "~/components/lib/router/Link";
-import { successButton } from "~/constants/buttonColor";
-import { postService } from "~/services/post.service";
+import { successButton } from "~/shared/constants/buttonColor";
+import { postService } from "~/shared/services/post.service";
 
 const { useGetPostDetail } = postService;
 

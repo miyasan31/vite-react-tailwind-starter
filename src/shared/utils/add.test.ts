@@ -1,4 +1,4 @@
-import { add } from "~/utils/add";
+import { add } from "~/shared/utils/add";
 
 describe("add", () => {
   it("1 + 2 = 3", () => {

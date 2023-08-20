@@ -1,8 +1,8 @@
 import type { AxiosResponse } from "axios";
 
-import { API_BASE_URL } from "~/constants/env";
-import type { IGetPostDetail, IGetPostList } from "~/interfaces/useCase/post";
-import { axiosClient } from "~/libs/axios/axiosClient";
+import { API_BASE_URL } from "~/shared/constants/env";
+import type { IGetPostDetail, IGetPostList } from "~/shared/interfaces/useCase/post";
+import { axiosClient } from "~/shared/libs/axios/axiosClient";
 
 interface IPostRepository {
   getPostList: () => Promise<IGetPostList>;

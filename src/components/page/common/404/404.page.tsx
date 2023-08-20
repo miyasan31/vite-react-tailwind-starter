@@ -1,5 +1,5 @@
 import { Link } from "~/components/lib/router/Link";
-import { successButton } from "~/constants/buttonColor";
+import { successButton } from "~/shared/constants/buttonColor";
 
 /**
  * @package

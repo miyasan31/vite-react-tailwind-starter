@@ -1,8 +1,8 @@
 import type { UseQueryOptions, UseQueryResult } from "react-query";
 import { useQuery } from "react-query";
 
-import type { IGetPostDetail, IGetPostList } from "~/interfaces/useCase/post";
-import { postRepository } from "~/repositories/post.repository";
+import type { IGetPostDetail, IGetPostList } from "~/shared/interfaces/useCase/post";
+import { postRepository } from "~/shared/repositories/post.repository";
 
 const { getPostList, getPostDetail } = postRepository;
 

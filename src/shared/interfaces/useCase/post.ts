@@ -1,4 +1,4 @@
-import type { IPost } from "~/interfaces/model/post";
+import type { IPost } from "~/shared/interfaces/model/post";
 
 export type IGetPostDetail = IPost;
 
