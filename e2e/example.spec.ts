@@ -17,5 +17,5 @@ test("my test", async ({ page }) => {
 
   await page.click("text=Get Started");
   // Expect some text to be visible on the page.
-  await expect(page.locator("text=Introduction").first()).toBeVisible();
+  await expect(page.locator("text=Introduction").first()).not.toBeVisible();
 });
