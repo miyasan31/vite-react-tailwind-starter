@@ -16,7 +16,7 @@ export const NestPostDetail = () => {
   if (!data) return null;
 
   return (
-    <main className="p-4 bg-slate-500">
+    <main className="bg-slate-500 p-4">
       <div className="flex gap-4 py-4">
         <Link to="/nest-posts" className={successButton}>
           to /nest-posts

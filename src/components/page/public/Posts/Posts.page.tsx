@@ -13,10 +13,10 @@ export const Posts = () => {
   if (!data) return null;
 
   return (
-    <main className="p-4 text-white bg-slate-700">
+    <main className="bg-slate-700 p-4 text-white">
       <h2>PostsPage</h2>
 
-      <div className="flex flex-col flex-1 gap-4 py-4">
+      <div className="flex flex-1 flex-col gap-4 py-4">
         {data.map((post) => (
           <div key={post.id} className="flex flex-col">
             <h3>title : {post.title}</h3>

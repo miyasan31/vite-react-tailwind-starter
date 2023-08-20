@@ -5,7 +5,7 @@ import { errorButton, successButton } from "~/constants/buttonColor";
 
 export const PrivateLayout = () => {
   return (
-    <main className="p-4 h-full min-h-screen bg-slate-900">
+    <main className="h-full min-h-screen bg-slate-900 p-4">
       <div className="flex flex-wrap gap-4 pb-4">
         <Link to="/" className={successButton}>
           to /

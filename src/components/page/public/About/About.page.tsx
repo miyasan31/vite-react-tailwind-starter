@@ -4,7 +4,7 @@ import { successButton } from "~/constants/buttonColor";
 
 export const About = () => {
   return (
-    <main className="p-4 bg-slate-700">
+    <main className="bg-slate-700 p-4">
       <h1 className="text-white">AboutPage</h1>
 
       <div className="flex py-4">

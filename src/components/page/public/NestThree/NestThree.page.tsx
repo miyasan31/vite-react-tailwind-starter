@@ -7,7 +7,7 @@ import { successButton } from "~/constants/buttonColor";
  */
 export const NestThree = () => {
   return (
-    <main className="p-4 bg-slate-300">
+    <main className="bg-slate-300 p-4">
       <h3>NestThree</h3>
 
       <div className="flex flex-wrap gap-4 py-4">

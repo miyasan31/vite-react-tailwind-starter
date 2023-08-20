@@ -7,7 +7,7 @@ import { errorButton, successButton } from "~/constants/buttonColor";
  */
 export const NestOne = () => {
   return (
-    <main className="p-4 bg-slate-700">
+    <main className="bg-slate-700 p-4">
       <h2 className="text-white">NestOne</h2>
 
       <div className="flex flex-wrap gap-4 py-4">

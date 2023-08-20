@@ -6,7 +6,7 @@ import { successButton } from "~/constants/buttonColor";
  */
 export const NotFound = () => {
   return (
-    <main className="p-4 text-white bg-red-600">
+    <main className="bg-red-600 p-4 text-white">
       <h1>404 NotFound</h1>
 
       <div className="flex py-4">
